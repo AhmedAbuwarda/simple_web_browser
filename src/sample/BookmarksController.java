@@ -52,8 +52,11 @@ public class BookmarksController implements Initializable {
 
         addbtn.setOnMouseClicked(e -> addItem());
         deletebtn.setOnMouseClicked(e -> deleteSelectedItem());
-        browsebtn.setOnMouseClicked(e -> BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl()
-        ));
+        browsebtn.setOnMouseClicked(e -> {
+            if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
+                BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
+            }
+        });
 
         // set cells to the table
         urlcolumn.setCellValueFactory(new PropertyValueFactory<>("url"));
