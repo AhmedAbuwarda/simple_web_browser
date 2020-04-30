@@ -50,9 +50,16 @@ public class BookmarksController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO code application logic here.
 
+        // add button -to add a url into the bookmarks-
         addbtn.setOnMouseClicked(e -> addItem());
+
+        // delete button -to delete a url from the bookmarks-
         deletebtn.setOnMouseClicked(e -> deleteSelectedItem());
+
+        // browse button -to browse any url from the bookmarks-
         browsebtn.setOnMouseClicked(e -> {
+
+            // load the website if it selected and the bookmark manager are not empty.
             if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
                 BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
             }
@@ -61,6 +68,8 @@ public class BookmarksController implements Initializable {
         // set cells to the table
         urlcolumn.setCellValueFactory(new PropertyValueFactory<>("url"));
         idcolumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+
+        // add the items to the table
         tableview.setItems(bookmarks);
 
     }
