@@ -64,7 +64,7 @@ public class BrowserController implements Initializable {
 
         webEngine = webView.getEngine();
         webEngine.setJavaScriptEnabled(true);
-        webEngine.load("http://google.com"); // load the homepage.
+        webEngine.load("https://google.com"); // load the homepage.
 
         txt.setOnAction(e -> webEngine.load(txt.getText().startsWith("http://") ? txt.getText() : "http://" + txt.getText()));
 
@@ -84,7 +84,10 @@ public class BrowserController implements Initializable {
         reloadbtn.setOnAction(e -> reloadWebSite());
 
         // Search text
-        webEngine.locationProperty().addListener((observable, oldValue, newValue) -> txt.setText(newValue));
+        webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
+            txt.setText(newValue);
+            System.out.println(oldValue);
+        });
 
         // bookmark button
         bookbtn.setOnMouseClicked(e -> {
