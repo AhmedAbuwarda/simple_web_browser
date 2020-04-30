@@ -62,15 +62,21 @@ public class BrowserController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO code application logic here.
 
+        // get the web engine ready
         webEngine = webView.getEngine();
-        webEngine.setJavaScriptEnabled(true);
-        webEngine.load("https://google.com"); // load the homepage.
 
-        txt.setOnAction(e -> webEngine.load(txt.getText().startsWith("http://") ? txt.getText() : "http://" + txt.getText()));
+        // enable javascript in the site
+        webEngine.setJavaScriptEnabled(true);
+
+        // load the homepage.
+        webEngine.load("https://google.com");
 
         setHistory(webEngine.getHistory());
         historyEntryList = getHistory().getEntries();
         SimpleListProperty<WebHistory.Entry> list = new SimpleListProperty<>(historyEntryList);
+
+        // search text filed
+        txt.setOnAction(e -> webEngine.load(txt.getText().startsWith("http://") ? txt.getText() : "http://" + txt.getText()));
 
         // backward button
         backbtn.setOnAction(e -> goBack());
@@ -85,20 +91,29 @@ public class BrowserController implements Initializable {
 
         // Search text
         webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
+
+            // put the site url inside the txt field.
             txt.setText(newValue);
+
+            // add web url to history
             HistoryController.history.add(new Table((int)(Math.random() * (500 - 100 + 1) + 100),newValue));
 
         });
 
         // bookmark button
         bookbtn.setOnMouseClicked(e -> {
+
+            // add the site url to bookmarks
             BookmarksController.bookmarks.add(new Table((int)(Math.random() * (500 - 100 + 1) + 100), txt.getText()));
+
+            // show alert box message
             Alert addBookmarkAlert = new Alert(Alert.AlertType.INFORMATION);
             addBookmarkAlert.initStyle(StageStyle.UTILITY);
             addBookmarkAlert.setTitle("BOOKMARK STATUS!");
             addBookmarkAlert.setHeaderText(null);
             addBookmarkAlert.setContentText("Bookmark added to your bookmark manager successfully");
             addBookmarkAlert.showAndWait();
+
         });
 
         // cookie storage management
@@ -106,14 +121,18 @@ public class BrowserController implements Initializable {
 
             if (clicked) {
 
+                // set the button as the default button
                 cookieStoragebtn.setDefaultButton(true);
+
+                // initialize cookies manager
                 CookieManager manager = new CookieManager();
                 manager.setCookiePolicy(CookiePolicy.ACCEPT_ORIGINAL_SERVER);
                 CookieHandler.setDefault(manager);
 
-                //it can save cookie on disk upon exit of application for next startup you can retrieve
+                // save cookie on disk for next startup of browser
                 CookieStore store = manager.getCookieStore();
                 try {
+
                     URI uriadd = new URI(getHistory().getEntries().get(getHistory().getCurrentIndex()).getUrl());
                     store.add(uriadd, new HttpCookie("name", "value"));
 
@@ -121,7 +140,7 @@ public class BrowserController implements Initializable {
                     e1.printStackTrace();
                 }
 
-                // get cookie implementation
+                // get cookie implementation.
                 try {
 
                     URI getcookie = new URI(getHistory().getEntries().get(getHistory().getCurrentIndex()).getUrl());
@@ -134,9 +153,12 @@ public class BrowserController implements Initializable {
 
             } else {
 
+                // cookies manager handler
                 cookieStoragebtn.setDefaultButton(false);
                 CookieManager manager = new CookieManager();
                 manager.setCookiePolicy(CookiePolicy.ACCEPT_NONE);
+
+                // show alert box message
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.initStyle(StageStyle.UTILITY);
                 alert.setTitle("COOKIES STATUS!");
@@ -150,11 +172,18 @@ public class BrowserController implements Initializable {
 
     }
 
+    /**
+     * default handel method
+     */
     @FXML
     private void handle() {
-
+        // to handel all the coming events.
     }
 
+    /**
+     *
+     * @throws IOException handel the exception
+     */
     @FXML
     private void showBookmarkScene() throws IOException {
 
@@ -167,6 +196,10 @@ public class BrowserController implements Initializable {
 
     }
 
+    /**
+     *
+     * @throws IOException handel the exception
+     */
     @FXML
     private void showHistoryScene() throws IOException {
 
@@ -179,6 +212,9 @@ public class BrowserController implements Initializable {
 
     }
 
+    /**
+     * reloadWebSite method
+     */
     public void reloadWebSite() {
         if (!getHistory().getEntries().isEmpty())
             webEngine.reload();
