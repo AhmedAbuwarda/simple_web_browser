@@ -49,7 +49,7 @@ public class HistoryController implements Initializable {
         deletebtn.setOnMouseClicked(e -> deleteSelectedItem());
         browsebtn.setOnMouseClicked(e -> {
             if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
-                //BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
+                BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
             }
         });
 
@@ -59,16 +59,6 @@ public class HistoryController implements Initializable {
         tableview.setItems(history);
 
     }
-
-    // add item to the table method
-//    public void addItem() {
-//
-//        if (!urltext.getText().isEmpty()) {
-//            history.add(new Table((int) (Math.random() * (500 - 100 + 1) + 100), urltext.getText()));
-//            urltext.clear();
-//        }
-//
-//    }
 
     // delete bookmark method
     private void deleteSelectedItem() {
