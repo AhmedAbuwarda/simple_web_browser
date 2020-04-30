@@ -45,9 +45,12 @@ public class HistoryController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO code application logic here.
 
-        //addbtn.setOnMouseClicked(e -> addItem());
+        // delete button -to delete a url from the history table-
         deletebtn.setOnMouseClicked(e -> deleteSelectedItem());
+
+        // browse button -to browse any url from the history table-
         browsebtn.setOnMouseClicked(e -> {
+            // load the website if it selected and the history manager are not empty.
             if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
                 BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
             }
@@ -56,6 +59,8 @@ public class HistoryController implements Initializable {
         // set cells to the table
         urlcolumn.setCellValueFactory(new PropertyValueFactory<>("url"));
         idcolumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+
+        // add the url to history table
         tableview.setItems(history);
 
     }
@@ -70,6 +75,9 @@ public class HistoryController implements Initializable {
 
     }
 
+    /**
+     * default handel method
+     */
     @FXML
     private void handle() {
         // handel action events
