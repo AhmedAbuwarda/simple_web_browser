@@ -26,7 +26,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("browser.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Browser.fxml"));
         primaryStage.setTitle("AhmadUC Browser");
         primaryStage.getIcons().add(new Image("browser.png"));
         primaryStage.setScene(new Scene(root, 1220, 600));

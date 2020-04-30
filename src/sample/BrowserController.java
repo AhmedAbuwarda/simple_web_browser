@@ -86,7 +86,8 @@ public class BrowserController implements Initializable {
         // Search text
         webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
             txt.setText(newValue);
-            System.out.println(oldValue);
+            HistoryController.history.add(new Table((int)(Math.random() * (500 - 100 + 1) + 100),newValue));
+
         });
 
         // bookmark button
@@ -161,6 +162,18 @@ public class BrowserController implements Initializable {
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Bookmark manager");
         primaryStage.getIcons().add(new Image("bookmarkSettings.png"));
+        primaryStage.setScene(new Scene(root, 600, 450));
+        primaryStage.show();
+
+    }
+
+    @FXML
+    private void showHistoryScene() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("History.fxml"));
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("History manager");
+        primaryStage.getIcons().add(new Image("history.png"));
         primaryStage.setScene(new Scene(root, 600, 450));
         primaryStage.show();
 
