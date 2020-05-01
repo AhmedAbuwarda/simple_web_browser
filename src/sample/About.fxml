@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #27272E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="125.0" layoutY="48.0" text="AhmedFireFox Browser" textFill="#e9e9e9">
+               <font>
+                  <Font name="Consolas Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="292.0" layoutY="85.0" text="2020.1.1 Free Edition" textFill="#e9e9e9">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="93.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="firefox.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="125.0" layoutY="139.0" text="AhmedFireFox Browser 2020.1.1 (Free Edition)" textFill="#27272e" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="139.0">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="157.0" prefHeight="18.0" prefWidth="331.0" text="Build #2020.1.1, build on May 1, 2020" textFill="#27272e" AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="156.0">
+         <font>
+            <Font name="Consolas" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="191.0" text="Runtime vertion: 1.8.0_251-b08" textFill="#27272e" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="211.0" AnchorPane.topAnchor="191.0">
+         <font>
+            <Font name="Consolas" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="209.0" text="VM: Java HotSpot(TM) 64-Bit Server" textFill="#27272e" AnchorPane.bottomAnchor="173.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font name="Consolas" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="263.0" text="Powered by OpenJDK-Source" textFill="#27272e" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="263.0">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="363.0" text="THE DRIVE TO DEVELOP" textFill="#27272e" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="363.0">
+         <font>
+            <Font name="Consolas Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="381.0" prefHeight="17.0" prefWidth="264.0" text="Copyright @ 2020 Ahmed Abuwarda" textFill="#27272e" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="211.0">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="554.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="554.0" AnchorPane.rightAnchor="19.93814468383789" AnchorPane.topAnchor="358.0">
+         <image>
+            <Image url="firefox.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
