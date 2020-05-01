@@ -31,6 +31,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image("browser.png"));
         primaryStage.setScene(new Scene(root, 1220, 600));
         primaryStage.show();
+
     }
 
     /**
@@ -40,5 +41,6 @@ public class Main extends Application {
         // TODO code application logic here.
 
         launch(args);
+
     }
 }

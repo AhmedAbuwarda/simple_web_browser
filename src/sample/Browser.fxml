@@ -19,7 +19,7 @@
                   <graphic>
                       <ImageView fitHeight="18.0" fitWidth="18.0">
                           <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/back1.png" />
+                              <Image url="back1.png" />
                           </image>
                           <viewport>
                               <Rectangle2D />
@@ -31,7 +31,7 @@
                   <graphic>
                       <ImageView fitHeight="18.0" fitWidth="18.0" rotate="180.0">
                           <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/back1.png" />
+                              <Image url="back1.png" />
                           </image>
                       </ImageView>
                   </graphic>
@@ -39,12 +39,12 @@
               <Button fx:id="reloadbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0" style="-fx-background-radius: 20px;">
                   <graphic>
                       <ImageView fitHeight="18.0" fitWidth="18.0">
-                          <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/reload.png" />
-                          </image>
                           <viewport>
                               <Rectangle2D />
                           </viewport>
+                     <image>
+                        <Image url="reload.png" />
+                     </image>
                       </ImageView>
                   </graphic>
               </Button>
@@ -53,7 +53,7 @@
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="18.0">
                      <image>
-                        <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/cookie.png" />
+                        <Image url="cookie.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -65,7 +65,7 @@
                   <graphic>
                       <ImageView fitHeight="18.0" fitWidth="18.0">
                           <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/bookmark.png" />
+                              <Image url="bookmark.png" />
                           </image>
                           <viewport>
                               <Rectangle2D />
@@ -73,15 +73,15 @@
                       </ImageView>
                   </graphic>
               </Button>
-            <MenuButton fx:id="settings" mnemonicParsing="false" stylesheets="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/but.css" HBox.hgrow="ALWAYS">
+            <MenuButton fx:id="settings" mnemonicParsing="false" stylesheets="but.css" HBox.hgrow="ALWAYS">
               <items>
-                <MenuItem fx:id="bookmarkSelected" mnemonicParsing="false" onAction="#showBookmarkScene" text="Bookmarks" />
-                <MenuItem fx:id="historySelected" mnemonicParsing="false" onAction="#showHistoryScene" text="History" />
+                <MenuItem mnemonicParsing="false" onAction="#showBookmarkScene" text="Bookmarks" />
+                <MenuItem mnemonicParsing="false" onAction="#showHistoryScene" text="History" />
               </items>
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/bookmarkSettings.png" />
+                        <Image url="bookmarkSettings.png" />
                      </image>
                   </ImageView>
                </graphic>

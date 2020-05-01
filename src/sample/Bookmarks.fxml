@@ -57,7 +57,7 @@
                      <graphic>
                         <ImageView>
                            <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/add.png" />
+                              <Image url="add.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>
@@ -68,7 +68,7 @@
                      <graphic>
                         <ImageView>
                            <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/delete.png" />
+                              <Image url="delete.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -80,7 +80,7 @@
                      <graphic>
                         <ImageView>
                            <image>
-                              <Image url="file:/C:/Users/Ahmed%20Abuwarda/IdeaProjects/simple_web_browser/res/open-in-browser.png" />
+                              <Image url="open-in-browser.png" />
                            </image>
                         </ImageView>
                      </graphic>
