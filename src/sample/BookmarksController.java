@@ -60,7 +60,7 @@ public class BookmarksController implements Initializable {
         browsebtn.setOnMouseClicked(e -> {
 
             // load the website if it selected and the bookmark manager are not empty.
-            if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
+            if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()) {
                 BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
             }
         });

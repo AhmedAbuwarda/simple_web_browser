@@ -19,9 +19,8 @@ public class Table {
     }
 
     /**
-     *
      * @param url url
-     * @param id id
+     * @param id  id
      */
     public Table(int id, String url) {
         this.url = url;
@@ -29,7 +28,6 @@ public class Table {
     }
 
     /**
-     *
      * @param url set url
      */
     public void setUrl(String url) {
@@ -37,7 +35,6 @@ public class Table {
     }
 
     /**
-     *
      * @param id set id
      */
     public void setId(int id) {
@@ -45,7 +42,6 @@ public class Table {
     }
 
     /**
-     *
      * @return url
      */
     public String getUrl() {
@@ -53,7 +49,6 @@ public class Table {
     }
 
     /**
-     *
      * @return id
      */
     public int getId() {

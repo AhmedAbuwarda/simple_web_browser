@@ -51,7 +51,7 @@ public class HistoryController implements Initializable {
         // browse button -to browse any url from the history table-
         browsebtn.setOnMouseClicked(e -> {
             // load the website if it selected and the history manager are not empty.
-            if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()){
+            if (!tableview.getItems().isEmpty() && !tableview.getSelectionModel().getSelectedItems().isEmpty()) {
                 BrowserController.webEngine.load(tableview.getSelectionModel().getSelectedItems().get(0).getUrl());
             }
         });

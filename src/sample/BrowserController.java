@@ -96,7 +96,7 @@ public class BrowserController implements Initializable {
             txt.setText(newValue);
 
             // add web url to history
-            HistoryController.history.add(new Table((int)(Math.random() * (500 - 100 + 1) + 100),newValue));
+            HistoryController.history.add(new Table((int) (Math.random() * (500 - 100 + 1) + 100), newValue));
 
         });
 
@@ -104,7 +104,7 @@ public class BrowserController implements Initializable {
         bookbtn.setOnMouseClicked(e -> {
 
             // add the site url to bookmarks
-            BookmarksController.bookmarks.add(new Table((int)(Math.random() * (500 - 100 + 1) + 100), txt.getText()));
+            BookmarksController.bookmarks.add(new Table((int) (Math.random() * (500 - 100 + 1) + 100), txt.getText()));
 
             // show alert box message
             Alert addBookmarkAlert = new Alert(Alert.AlertType.INFORMATION);
@@ -181,7 +181,6 @@ public class BrowserController implements Initializable {
     }
 
     /**
-     *
      * @throws IOException handel the exception
      */
     @FXML
@@ -197,7 +196,6 @@ public class BrowserController implements Initializable {
     }
 
     /**
-     *
      * @throws IOException handel the exception
      */
     @FXML
