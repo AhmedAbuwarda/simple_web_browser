@@ -210,6 +210,9 @@ public class BrowserController implements Initializable {
 
     }
 
+    /**
+     * @throws IOException handel the exception
+     */
     @FXML
     private void showAboutScene() throws IOException {
 

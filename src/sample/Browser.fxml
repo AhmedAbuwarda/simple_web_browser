@@ -11,84 +11,74 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane id="AnchorPane" fx:id="anc" prefHeight="560.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BrowserController">
-    <children>
-        <HBox spacing="1.0" AnchorPane.bottomAnchor="534.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <Button fx:id="backbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0">
-                            <image>
-                                <Image url="back1.png" />
-                            </image>
-                            <viewport>
-                                <Rectangle2D />
-                            </viewport>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="forbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0" rotate="180.0">
-                            <image>
-                                <Image url="back1.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="reloadbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0" style="-fx-background-radius: 20px;">
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0">
-                            <viewport>
-                                <Rectangle2D />
-                            </viewport>
-                            <image>
-                                <Image url="reload.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <TextField fx:id="txt" prefHeight="26.0" prefWidth="575.0" promptText="Enter your URL..." style="-fx-background-radius: 7px;" HBox.hgrow="ALWAYS" />
-                <Button fx:id="cookieStoragebtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0" HBox.hgrow="ALWAYS">
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0">
-                            <image>
-                                <Image url="cookie.png" />
-                            </image>
-                            <viewport>
-                                <Rectangle2D />
-                            </viewport>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="bookbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0">
-                            <image>
-                                <Image url="bookmark.png" />
-                            </image>
-                            <viewport>
-                                <Rectangle2D />
-                            </viewport>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <MenuButton fx:id="settings" mnemonicParsing="false" stylesheets="but.css" HBox.hgrow="ALWAYS">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#showBookmarkScene" text="Bookmarks" />
-                        <MenuItem mnemonicParsing="false" onAction="#showHistoryScene" text="History" />
-                  <MenuItem mnemonicParsing="false" onAction="#showAboutScene" text="About" />
-                    </items>
-                    <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="bookmarkSettings.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </MenuButton>
-            </children>
-        </HBox>
-        <WebView fx:id="webView" layoutY="29.0" prefHeight="530.0" prefWidth="784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BrowserController">
+    <HBox spacing="1.0" AnchorPane.bottomAnchor="534.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <Button fx:id="backbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0">
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                    <Image url="back1.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="forbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0" rotate="180.0">
+                    <Image url="back1.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="reloadbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0"
+                style="-fx-background-radius: 20px;">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0">
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                    <Image url="reload.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TextField fx:id="txt" prefHeight="26.0" prefWidth="575.0" promptText="Enter your URL..."
+                   style="-fx-background-radius: 7px;" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="cookieStoragebtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0"
+                prefWidth="26.0" HBox.hgrow="ALWAYS">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0">
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                    <Image url="cookie.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="bookbtn" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="26.0">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0">
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                    <Image url="bookmark.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <MenuButton fx:id="settings" mnemonicParsing="false" stylesheets="but.css" HBox.hgrow="ALWAYS">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showBookmarkScene" text="Bookmarks"/>
+                <MenuItem mnemonicParsing="false" onAction="#showHistoryScene" text="History"/>
+                <MenuItem mnemonicParsing="false" onAction="#showAboutScene" text="About"/>
+            </items>
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="bookmarkSettings.png"/>
+                </ImageView>
+            </graphic>
+        </MenuButton>
+    </HBox>
+    <WebView fx:id="webView" layoutY="29.0" prefHeight="530.0" prefWidth="784.0" AnchorPane.bottomAnchor="0.0"
+             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0"/>
 </AnchorPane>

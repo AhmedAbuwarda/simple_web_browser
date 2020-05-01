@@ -13,6 +13,7 @@ public class Table {
     private String url;
     private int id;
 
+    // Default constructor
     public Table() {
         url = "https://";
         id = 0;
