@@ -14,7 +14,8 @@ public class SimpleWebBrowser extends JPanel {
      * The main routine simply opens a window that shows a SimpleWebBrowser panel.
      */
     public static void main(String[] args) {
-        JFrame window = new JFrame("SimpleWebBrowser");
+
+        JFrame window = new JFrame("Ahmed Web Browser");
         SimpleWebBrowser content = new SimpleWebBrowser();
         window.setContentPane(content);
         window.setSize(600, 500);
@@ -25,26 +26,15 @@ public class SimpleWebBrowser extends JPanel {
         window.setVisible(true);
     }
 
-
-    /**
-     * The pane in which documents are displayed.
-     */
+    // The pane in which documents are displayed.
     private final JEditorPane editPane;
 
-
-    /**
-     * An input box where the user enters the URL of a document
-     * to be loaded into the edit pane.  A value URL string has
-     * to contain the substring "://".  If the string in the box
-     * does not contain this substring, then "http://" is
-     * prepended to the string.
-     */
+    // an input box where the user enters the URL of a document
     private final JTextField locationInput;
 
 
     /**
-     * Defines a listner that responds when the user clicks on
-     * a link in the document.
+     * when the user clicks on a link in the document.
      */
     private class LinkListener implements HyperlinkListener {
         public void hyperlinkUpdate(HyperlinkEvent evt) {
@@ -88,7 +78,6 @@ public class SimpleWebBrowser extends JPanel {
      */
     public SimpleWebBrowser() {
 
-
         setBackground(Color.BLACK);
         setLayout(new BorderLayout(1, 1));
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
@@ -102,9 +91,9 @@ public class SimpleWebBrowser extends JPanel {
         toolbar.setFloatable(false);
         add(toolbar, BorderLayout.NORTH);
         ActionListener goListener = new GoListener();
-        locationInput = new JTextField("www.sourcecodester.com", 40);
+        locationInput = new JTextField("www.google.com", 40);
         locationInput.addActionListener(goListener);
-        JButton goButton = new JButton(" Go ");
+        JButton goButton = new JButton(" Search ");
         goButton.addActionListener(goListener);
         toolbar.add(new JLabel(" Location: "));
         toolbar.add(locationInput);
@@ -122,8 +111,7 @@ public class SimpleWebBrowser extends JPanel {
             editPane.setPage(url);
         } catch (Exception e) {
             editPane.setContentType("text/plain");
-            editPane.setText("Sorry, the requested document was not found\n"
-                    + "or cannot be displayed.\n\nError:" + e);
+            editPane.setText("Error, the requested document was not found!\n" + e);
         }
     }
 

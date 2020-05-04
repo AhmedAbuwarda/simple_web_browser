@@ -76,7 +76,7 @@ public class BrowserController implements Initializable {
         SimpleListProperty<WebHistory.Entry> list = new SimpleListProperty<>(historyEntryList);
 
         // search text filed
-        txt.setOnAction(e -> webEngine.load(txt.getText().startsWith("https://") ? txt.getText() : "https://" + txt.getText()));
+        txt.setOnAction(e -> webEngine.load(txt.getText().startsWith("http://") ? txt.getText() : txt.getText().startsWith("https://") ? txt.getText() : "https://" + txt.getText()));
 
         // backward button
         backbtn.setOnAction(e -> goBack());
